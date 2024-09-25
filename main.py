@@ -12,7 +12,7 @@ option=st.sidebar.radio(
 )
 
 df = pd.read_csv('athlete_events.csv')
-region_df = pd.read_csv('noc_regions.csv')
+df_region = pd.read_csv('noc_regions.csv')
 
 df=df.merge(df_region,on='NOC',how='left')
 df['Medal'].fillna('No_medal',inplace=True)
